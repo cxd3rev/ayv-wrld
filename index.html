@@ -16,55 +16,98 @@
 
     <body>
 
-        <header>
+        <div class="atmosphere" aria-hidden="true">
+            <span class="orb orb-a"></span>
+            <span class="orb orb-b"></span>
+            <span class="orb orb-c"></span>
+        </div>
 
-            <nav class="navbar" id="navbar"> 
-                <div class="brand"> 
-                    <a href="index.html" class="brand">
-                    <img class="logo" src="images/big.png" alt="ayv wrld. logo">
+        <div class="shell">
+            <nav class="pane pane-nav" id="navbar">
+                <span class="glass-sheen" aria-hidden="true"></span>
+                <div class="nav-inner">
+                    <a class="brand" href="index.html">
+                        <img src="images/small.png" alt="" class="nav-logo">
+                        <span>ayv wrld.</span>
                     </a>
-                    <span class="company-name">ayv wrld.</span>
-                </div> 
-
-                <div class="navlinks">  
-                    <a href="#">The Journey</a> 
-                    <a href="#">My Story</a> 
-                    <a href="#">Projects</a> 
-                </div> 
+                    <div class="nav-links">
+                        <a href="story.html" data-view="story">My Story</a>
+                        <a href="journey.html" data-view="journey">The Journey</a>
+                        <a href="work.html" data-view="work">My Creations</a>
+                    </div>
+                </div>
             </nav>
 
-        </header>
+            <div class="mosaic" id="mosaic">
+                <section class="pane pane-hero" data-shape="hero" data-box="0 0 42 100">
+                    <span class="glass-sheen" aria-hidden="true"></span>
+                    <div class="mosaic-face">
+                        <div class="face-copy">
+                            <h1>Achieve Your<br>Vision</h1>
+                            <p class="lede">Turning daily frustrations into life saving automations.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <main>
+                <section class="pane pane-story" id="story" data-shape="story" data-box="37 0 63 38">
+                    <span class="glass-sheen" aria-hidden="true"></span>
+                </section>
 
-            <div class="skills-box">
+                <section class="pane pane-journey" id="journey" data-shape="journey" data-box="70 32 30 38">
+                    <span class="glass-sheen" aria-hidden="true"></span>
+                </section>
 
-                <h1>WHAT I CAN BUILD</h1>
+                <section class="pane pane-skills" data-shape="skills" data-box="37 32 35 36">
+                    <span class="glass-sheen" aria-hidden="true"></span>
+                </section>
 
-                <div class="skills-list">
-                    <span>Front-End Websites</span>
-                    <span>Full-Stack Web Applications</span>
-                    <span>Automation Tools</span>
-                    <span>Desktop Applications</span>
-                    <span>Crypto & Investment Tools</span>
-                    <span>Interactive Dashboards</span>
-                </div>
-
-                <p>Turning daily frustrations into life saving automations.</p>
-
+                <section class="pane pane-work" id="work" data-shape="work" data-box="35 66 65 34">
+                    <span class="glass-sheen" aria-hidden="true"></span>
+                </section>
             </div>
+        </div>
 
-            <img
-                id="mainLogo"
-                class="main-logo"
-                src="images/big.png"
-                alt="ayv wrld. logo"
-            >
+        <div class="info-view" id="infoView" hidden inert aria-hidden="true">
+            <button type="button" class="pane corner-lobe" id="cornerLobe" aria-label="Back to mosaic" tabindex="-1">
+                <span class="glass-sheen" aria-hidden="true"></span>
+                <span class="back-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </button>
 
-        </main>
+            <div class="info-layout">
+                <div class="info-copy">
+                    <article data-info="story">
+                        <p class="eyebrow">about</p>
+                        <h1>My Story</h1>
+                        <p>I build because the small things in a day should not steal a whole night. Repeated work is a signal. When a task shows up again, it should become a tool instead of another late hour.</p>
+                        <p>The work starts close to real life: a messy process, a missing dashboard, a site that should already exist. Then it is shaped until someone can actually use it.</p>
+                        <p>If a tool helps one person, it could help all of humanity.</p>
+                    </article>
 
+                    <article data-info="journey">
+                        <p class="eyebrow">process</p>
+                        <h1>The Journey</h1>
+                        <p>Every build follows the same path. It stays short on purpose, so the work does not drown in process.</p>
+                        <ol>
+                            <li>Start from a real frustration. If it does not hurt in the day, it is not worth a night of building.</li>
+                            <li>Shape it into something people can use. Interface, flow, and reliability matter as much as the idea.</li>
+                            <li>Ship, refine, and keep moving. The first version is a start. The product lives in the next passes.</li>
+                        </ol>
+                        <p>That loop is how Rated., Dili Paints, and the next tools get made.</p>
+                    </article>
+                </div>
+                <div class="logo-stage">
+                    <button type="button" class="info-logo-btn" aria-label="Spin logo" tabindex="-1">
+                        <img class="info-logo" src="images/big.png" alt="ayv wrld. logo">
+                    </button>
+                </div>
+            </div>
+        </div>
 
-    <script src="movement.js"></script>
+        <script src="movement.js"></script>
 
     </body>
 
