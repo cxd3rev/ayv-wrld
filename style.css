@@ -600,7 +600,7 @@ body.info-page .info-copy article.info-work {
 }
 
 .float-rated,
-.float-review,
+.float-stary,
 .float-dili,
 .float-omas {
     z-index: 3;
@@ -612,7 +612,7 @@ body.info-page .info-copy article.info-work {
     width: min(20vw, 122px);
 }
 
-.float-review {
+.float-stary {
     --lx: 36%;
     --ly: 80%;
     appearance: none;
@@ -637,7 +637,7 @@ body.info-page .info-copy article.info-work {
 }
 
 .float-rated img,
-.float-review img {
+.float-stary img {
     margin-top: -12%;
     margin-bottom: -6%;
 }
@@ -670,7 +670,7 @@ body.info-page .info-copy article.info-work {
 
 .float-rated img,
 .float-dili img,
-.float-review img,
+.float-stary img,
 .float-omas img {
     filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
 }
@@ -690,32 +690,32 @@ body.info-page .info-copy article.info-work {
 
 .float-logos:has(.float-ayv:hover) .float-ayv { --sc: 1.12; }
 .float-logos:has(.float-ayv:hover) .float-rated { --tx: -30px; --ty: 10px; --sc: 0.94; }
-.float-logos:has(.float-ayv:hover) .float-review { --tx: -12px; --ty: 22px; --sc: 0.94; }
+.float-logos:has(.float-ayv:hover) .float-stary { --tx: -12px; --ty: 22px; --sc: 0.94; }
 .float-logos:has(.float-ayv:hover) .float-dili { --tx: 12px; --ty: 22px; --sc: 0.94; }
 .float-logos:has(.float-ayv:hover) .float-omas { --tx: 30px; --ty: 10px; --sc: 0.94; }
 
 .float-logos:has(.float-rated:hover) .float-rated { --sc: 1.14; --tx: -12px; --ty: 6px; }
 .float-logos:has(.float-rated:hover) .float-ayv { --tx: 16px; --ty: -8px; --sc: 0.94; }
-.float-logos:has(.float-rated:hover) .float-review { --tx: 18px; --ty: 10px; --sc: 0.94; }
+.float-logos:has(.float-rated:hover) .float-stary { --tx: 18px; --ty: 10px; --sc: 0.94; }
 .float-logos:has(.float-rated:hover) .float-dili { --tx: 26px; --sc: 0.94; }
 .float-logos:has(.float-rated:hover) .float-omas { --tx: 22px; --sc: 0.94; }
 
-.float-logos:has(.float-review:hover) .float-review { --sc: 1.14; --ty: 10px; }
-.float-logos:has(.float-review:hover) .float-ayv { --ty: -14px; --sc: 0.94; }
-.float-logos:has(.float-review:hover) .float-rated { --tx: -26px; --ty: -6px; --sc: 0.94; }
-.float-logos:has(.float-review:hover) .float-dili { --tx: 22px; --sc: 0.94; }
-.float-logos:has(.float-review:hover) .float-omas { --tx: 16px; --ty: -6px; --sc: 0.94; }
+.float-logos:has(.float-stary:hover) .float-stary { --sc: 1.14; --ty: 10px; }
+.float-logos:has(.float-stary:hover) .float-ayv { --ty: -14px; --sc: 0.94; }
+.float-logos:has(.float-stary:hover) .float-rated { --tx: -26px; --ty: -6px; --sc: 0.94; }
+.float-logos:has(.float-stary:hover) .float-dili { --tx: 22px; --sc: 0.94; }
+.float-logos:has(.float-stary:hover) .float-omas { --tx: 16px; --ty: -6px; --sc: 0.94; }
 
 .float-logos:has(.float-dili:hover) .float-dili { --sc: 1.14; --tx: 12px; --ty: 6px; }
 .float-logos:has(.float-dili:hover) .float-ayv { --tx: -16px; --ty: -8px; --sc: 0.94; }
-.float-logos:has(.float-dili:hover) .float-review { --tx: -22px; --sc: 0.94; }
+.float-logos:has(.float-dili:hover) .float-stary { --tx: -22px; --sc: 0.94; }
 .float-logos:has(.float-dili:hover) .float-rated { --tx: -26px; --sc: 0.94; }
 .float-logos:has(.float-dili:hover) .float-omas { --tx: 18px; --ty: -8px; --sc: 0.94; }
 
 .float-logos:has(.float-omas:hover) .float-omas { --sc: 1.14; --tx: 12px; --ty: 6px; }
 .float-logos:has(.float-omas:hover) .float-ayv { --tx: -16px; --ty: -8px; --sc: 0.94; }
 .float-logos:has(.float-omas:hover) .float-rated { --tx: -22px; --ty: -4px; --sc: 0.94; }
-.float-logos:has(.float-omas:hover) .float-review { --tx: -18px; --ty: 8px; --sc: 0.94; }
+.float-logos:has(.float-omas:hover) .float-stary { --tx: -18px; --ty: 8px; --sc: 0.94; }
 .float-logos:has(.float-omas:hover) .float-dili { --tx: -20px; --ty: 10px; --sc: 0.94; }
 
 @property --tilt-x {
@@ -942,28 +942,28 @@ body.info-page .info-copy article {
 
     .float-logos:has(.float-ayv:hover) .float-ayv,
     .float-logos:has(.float-ayv:hover) .float-rated,
-    .float-logos:has(.float-ayv:hover) .float-review,
+    .float-logos:has(.float-ayv:hover) .float-stary,
     .float-logos:has(.float-ayv:hover) .float-dili,
     .float-logos:has(.float-ayv:hover) .float-omas,
     .float-logos:has(.float-rated:hover) .float-rated,
     .float-logos:has(.float-rated:hover) .float-ayv,
-    .float-logos:has(.float-rated:hover) .float-review,
+    .float-logos:has(.float-rated:hover) .float-stary,
     .float-logos:has(.float-rated:hover) .float-dili,
     .float-logos:has(.float-rated:hover) .float-omas,
-    .float-logos:has(.float-review:hover) .float-review,
-    .float-logos:has(.float-review:hover) .float-ayv,
-    .float-logos:has(.float-review:hover) .float-rated,
-    .float-logos:has(.float-review:hover) .float-dili,
-    .float-logos:has(.float-review:hover) .float-omas,
+    .float-logos:has(.float-stary:hover) .float-stary,
+    .float-logos:has(.float-stary:hover) .float-ayv,
+    .float-logos:has(.float-stary:hover) .float-rated,
+    .float-logos:has(.float-stary:hover) .float-dili,
+    .float-logos:has(.float-stary:hover) .float-omas,
     .float-logos:has(.float-dili:hover) .float-dili,
     .float-logos:has(.float-dili:hover) .float-ayv,
-    .float-logos:has(.float-dili:hover) .float-review,
+    .float-logos:has(.float-dili:hover) .float-stary,
     .float-logos:has(.float-dili:hover) .float-rated,
     .float-logos:has(.float-dili:hover) .float-omas,
     .float-logos:has(.float-omas:hover) .float-omas,
     .float-logos:has(.float-omas:hover) .float-ayv,
     .float-logos:has(.float-omas:hover) .float-rated,
-    .float-logos:has(.float-omas:hover) .float-review,
+    .float-logos:has(.float-omas:hover) .float-stary,
     .float-logos:has(.float-omas:hover) .float-dili {
         --sc: 1;
         --tx: 0px;
@@ -1063,7 +1063,7 @@ body.info-page .info-copy article {
         width: min(22vw, 92px);
     }
 
-    .float-review {
+    .float-stary {
         --lx: 36%;
         --ly: 84%;
         width: min(28vw, 116px);
