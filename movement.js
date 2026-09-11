@@ -1,3 +1,25 @@
+function duplicateCreationMarquee() {
+    const track = document.querySelector(".creation-marquee-track");
+    if (!track) {
+        return;
+    }
+    const original = track.querySelector(".creation-shots");
+    if (!original || track.querySelectorAll(".creation-shots").length > 1) {
+        return;
+    }
+    const clone = original.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.querySelectorAll("a, button").forEach(function (el) {
+        el.setAttribute("tabindex", "-1");
+        if (el.tagName === "A") {
+            el.removeAttribute("href");
+        }
+    });
+    track.appendChild(clone);
+}
+
+duplicateCreationMarquee();
+
 const mosaic = document.getElementById("mosaic");
 const panes = Array.from(document.querySelectorAll(".pane"));
 const shards = Array.from(document.querySelectorAll(".mosaic .pane"));
@@ -90,10 +112,12 @@ const paneMeta = panes.map(function (pane) {
     const box = pane.dataset.box;
     const stage = pane.closest(".creation-stage");
     const isNav = pane.classList.contains("pane-nav");
+    const isCreationPhone = pane.classList.contains("creation-phone");
     const parts = box ? box.split(" ").map(Number) : null;
     return {
         pane: pane,
         isNav: isNav,
+        isCreationPhone: isCreationPhone,
         stage: stage,
         box: parts,
         inInfo: !!(infoView && infoView.contains(pane)),
@@ -686,7 +710,7 @@ function applyPaneMotion() {
     const tiltScale = reduceMotion ? 0 : 1;
 
     paneMeta.forEach(function (meta, index) {
-        if (!meta.visible) {
+        if (!meta.visible || meta.isCreationPhone) {
             return;
         }
 
